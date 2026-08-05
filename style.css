@@ -25,57 +25,47 @@ body.home-page {
     height: 100vh;
     overflow: hidden;
     position: relative;
-    /* Fondo de pantalla Windows XP */
+    /* Fondo de pantalla Windows XP Bliss */
     background-image: url('https://upload.wikimedia.org/wikipedia/en/2/27/Bliss_%28Windows_XP%29.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    /* Fuente estilo retro */
     font-family: 'Comic Sans MS', 'Tahoma', 'Verdana', sans-serif;
 }
 
-/* Título principal en negrita, blanco con borde negro */
+/* Título principal: EN NEGRITA, EN BLANCO Y SIN BORDE NEGRO */
 .home-page .title {
     position: absolute;
-    top: 6vh;
-    left: 5vw;
-    font-size: clamp(2rem, 4vw, 3.5rem); /* Se adapta según el tamaño de la pantalla */
+    top: 8%;
+    left: 6%;
+    font-size: clamp(2.5rem, 4.5vw, 3.8rem);
     font-weight: bold;
     color: #ffffff;
     margin: 0;
     user-select: none;
-    text-shadow: 
-        -2px -2px 0 #000,  
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000,
-         3px  3px 6px rgba(0,0,0,0.9);
+    text-shadow: none;
 }
 
-.cursor {
-    font-size: 0.8em;
-    margin-left: 8px;
-}
-
-/* Estilo común de cada elemento */
+/* Estilo común de cada elemento de la portada */
 .element {
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 10px;
-    white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+    gap: 12px;
+    white-space: nowrap;
 }
 
+/* EMOTICONOS GRANDES */
 .element .icon {
-    font-size: 2.2rem;
-    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.8));
+    font-size: 3.2rem;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.6));
 }
 
-/* Enlaces en blanco con borde negro */
+/* Enlaces de las secciones: Blanco con borde negro */
 .element a {
     text-decoration: none;
     color: #ffffff;
-    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
     font-weight: normal;
     font-family: 'Comic Sans MS', 'Tahoma', 'Verdana', sans-serif;
     text-shadow: 
@@ -83,7 +73,7 @@ body.home-page {
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000,
-         2px  2px 5px rgba(0,0,0,0.9);
+         2px  2px 4px rgba(0,0,0,0.9);
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -94,31 +84,31 @@ body.home-page {
 }
 
 /* ==========================================
-   POSICIONES EXACTAS DISTRIBUIDAS
+   POSICIONES SEPARADAS TIPO ESCRITORIO
    ========================================== */
 
-/* "sobre mi.." (Arriba a la derecha) */
+/* "sobre mi.." -> Arriba a la derecha */
 .sobre-mi { 
-    top: 22vh; 
-    left: 72vw; 
+    top: 25%; 
+    left: 70%; 
 }
 
-/* "ensayos" (A la izquierda, en el cielo) */
+/* "ensayos" -> Centro-izquierda (Cielo) */
 .ensayos { 
-    top: 40vh; 
-    left: 18vw; 
+    top: 42%; 
+    left: 18%; 
 }
 
-/* "música y cine" (En la colina, parte central) */
-.musica-cine { 
-    top: 65vh; 
-    left: 28vw; 
+/* "cultura..música y cine" -> Centro en la colina */
+.cultura { 
+    top: 65%; 
+    left: 32%; 
 }
 
-/* "deseo.. amor" (Abajo a la derecha, en la hierba) */
-.deseo-amor { 
-    top: 75vh; 
-    left: 60vw; 
+/* "deseo.. amor" -> Abajo a la derecha en la hierba */
+.deseo { 
+    top: 76%; 
+    left: 62%; 
 }
 
 
@@ -130,7 +120,6 @@ body.section-page {
     min-height: 100vh;
 }
 
-/* Encabezado fijo superior */
 .section-header {
     padding: 40px 6% 20px 6%;
     display: flex;
@@ -248,7 +237,7 @@ body.section-page {
     border-radius: 4px;
 }
 
-/* Estilos para la biografía sencilla en sobre-mi.html */
+/* Biografía sencilla */
 .bio-container {
     line-height: 1.8;
     font-size: 1.1rem;
