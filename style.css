@@ -1,0 +1,203 @@
+/* ==========================================
+   ESTILOS GENERALES
+   ========================================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+/* ==========================================
+   PORTADA (PÁGINA PRINCIPAL)
+   ========================================== */
+body.home-page {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/2/27/Bliss_%28Windows_XP%29.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-page .title {
+    position: absolute;
+    top: 8%;
+    left: 6%;
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 0;
+    user-select: none;
+}
+
+.cursor {
+    font-size: 2.5rem;
+    margin-left: 5px;
+}
+
+.element {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.element .icon {
+    font-size: 2rem;
+}
+
+.element a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    transition: opacity 0.2s ease;
+}
+
+.element a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/* Posiciones en la portada */
+.sobre-mi { top: 22%; right: 18%; }
+.ensayos { top: 40%; left: 18%; }
+.musica-cine { top: 65%; left: 26%; }
+.deseo-amor { top: 75%; right: 25%; }
+
+
+/* ==========================================
+   PÁGINAS DE SECCIÓN (FONDO BLANCO)
+   ========================================== */
+body.section-page {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Encabezado fijo superior */
+.section-header {
+    padding: 40px 6% 20px 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.section-header .title {
+    position: static;
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 0;
+    user-select: none;
+}
+
+.back-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 10px auto 50px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+/* Lista de textos estilo acordeón */
+.text-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.text-header {
+    padding: 15px 20px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.text-header::-webkit-details-marker {
+    display: none;
+}
+
+.text-header:hover {
+    background-color: #f9f9f9;
+}
+
+.text-info h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.text-info .subtitle {
+    margin: 5px 0 0 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Contenido desplegado */
+.text-content {
+    display: flex;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    gap: 20px;
+}
+
+.text-body {
+    flex: 1;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.text-body p {
+    margin-top: 0;
+}
+
+/* Foto cuadrada en la parte derecha */
+.text-image {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.text-image img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+}
+/* Estilos para la biografía sencilla en sobre-mi.html */
+.bio-container {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.bio-container p {
+    margin-bottom: 20px;
+}
