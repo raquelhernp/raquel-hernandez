@@ -33,17 +33,24 @@ body.home-page {
     font-family: 'Comic Sans MS', 'Tahoma', 'Verdana', sans-serif;
 }
 
-/* Título principal: EN NEGRITA, EN BLANCO Y SIN BORDE NEGRO */
+/* Título principal: EN NEGRITA, EN BLANCO Y CON BORDE NEGRO DEFINIDO */
 .home-page .title {
     position: absolute;
     top: 8%;
     left: 6%;
     font-size: clamp(2.5rem, 4.5vw, 3.8rem);
-    font-weight: bold;
-    color: #ffffff;
+    font-weight: bold;  /* Título en negrita */
+    color: #ffffff;     /* Texto en blanco */
     margin: 0;
     user-select: none;
-    text-shadow: none;
+    /* Contorno/borde negro marcado alrededor de las letras */
+    -webkit-text-stroke: 1.5px #000000;
+    text-shadow: 
+        -2px -2px 0 #000000,  
+         2px -2px 0 #000000,
+        -2px  2px 0 #000000,
+         2px  2px 0 #000000,
+         3px  3px 6px rgba(0, 0, 0, 0.7);
 }
 
 /* Estilo común de cada elemento de la portada */
