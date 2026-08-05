@@ -9,7 +9,7 @@ body {
 }
 
 /* ==========================================
-   PORTADA (PÁGINA PRINCIPAL)
+   PORTADA (PÁGINA PRINCIPAL - ESTILO ESCRITORIO)
    ========================================== */
 body.home-page {
     height: 100vh;
@@ -20,51 +20,98 @@ body.home-page {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    /* Tipografía estilo retro de Windows */
+    font-family: 'Comic Sans MS', 'Tahoma', 'Verdana', sans-serif;
 }
 
+/* Título principal en negrita, blanco con borde negro */
 .home-page .title {
     position: absolute;
-    top: 8%;
-    left: 6%;
-    font-size: 3rem;
-    font-weight: normal;
+    top: 6%;
+    left: 4%;
+    font-size: 3.2rem;
+    font-weight: bold; /* Título en negrita */
+    color: #ffffff;    /* Texto en blanco */
     margin: 0;
     user-select: none;
+    /* Borde negro alrededor de las letras */
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         3px  3px 5px rgba(0,0,0,0.8);
 }
 
 .cursor {
     font-size: 2.5rem;
-    margin-left: 5px;
+    margin-left: 8px;
 }
 
+/* Estilo común de las secciones (iconos + enlaces) */
 .element {
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .element .icon {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    /* Sombreado para destacar los iconos */
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.7));
 }
 
+/* Enlaces en blanco con borde negro */
 .element a {
     text-decoration: none;
-    color: #000;
-    font-size: 1.5rem;
-    transition: opacity 0.2s ease;
+    color: #ffffff;    /* Texto blanco */
+    font-size: 1.6rem;
+    font-weight: normal;
+    font-family: 'Comic Sans MS', 'Tahoma', 'Verdana', sans-serif;
+    /* Borde negro alrededor de las letras */
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         2px  2px 4px rgba(0,0,0,0.8);
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .element a:hover {
-    opacity: 0.7;
+    opacity: 0.85;
     text-decoration: underline;
+    transform: scale(1.05); /* Ligero aumento al pasar el cursor */
 }
 
-/* Posiciones en la portada */
-.sobre-mi { top: 22%; right: 18%; }
-.ensayos { top: 40%; left: 18%; }
-.musica-cine { top: 65%; left: 26%; }
-.deseo-amor { top: 75%; right: 25%; }
+/* ==========================================
+   POSICIONES DISPERSAS (ESTILO ESCRITORIO)
+   ========================================== */
+
+/* "sobre mi.." (Arriba a la derecha) */
+.sobre-mi { 
+    top: 25%; 
+    right: 12%; 
+}
+
+/* "ensayos" (A la izquierda, debajo del título) */
+.ensayos { 
+    top: 42%; 
+    left: 15%; 
+}
+
+/* "música y cine" (En el centro de la colina) */
+.musica-cine { 
+    top: 68%; 
+    left: 28%; 
+}
+
+/* "deseo.. amor" (Abajo a la derecha) */
+.deseo-amor { 
+    top: 78%; 
+    right: 22%; 
+}
 
 
 /* ==========================================
@@ -90,6 +137,7 @@ body.section-page {
     font-weight: normal;
     margin: 0;
     user-select: none;
+    color: #000;
 }
 
 .back-link {
@@ -178,7 +226,7 @@ body.section-page {
     margin-top: 0;
 }
 
-/* Foto cuadrada en la parte derecha */
+/* Foto cuadrada a la derecha */
 .text-image {
     width: 220px;
     flex-shrink: 0;
@@ -191,6 +239,7 @@ body.section-page {
     object-fit: cover;
     border-radius: 4px;
 }
+
 /* Estilos para la biografía sencilla en sobre-mi.html */
 .bio-container {
     line-height: 1.8;
