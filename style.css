@@ -1,9 +1,18 @@
 /* ==========================================
-   ESTILOS GENERALES
+   RESET Y REGLAS GENERALES
    ========================================== */
-body {
+* {
+    box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
     font-family: Arial, sans-serif;
     color: #000;
 }
@@ -12,105 +21,104 @@ body {
    PORTADA (PÁGINA PRINCIPAL - ESTILO ESCRITORIO)
    ========================================== */
 body.home-page {
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     overflow: hidden;
     position: relative;
+    /* Fondo de pantalla Windows XP */
     background-image: url('https://upload.wikimedia.org/wikipedia/en/2/27/Bliss_%28Windows_XP%29.png');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
-    /* Tipografía estilo retro de Windows */
+    /* Fuente estilo retro */
     font-family: 'Comic Sans MS', 'Tahoma', 'Verdana', sans-serif;
 }
 
 /* Título principal en negrita, blanco con borde negro */
 .home-page .title {
     position: absolute;
-    top: 6%;
-    left: 4%;
-    font-size: 3.2rem;
-    font-weight: bold; /* Título en negrita */
-    color: #ffffff;    /* Texto en blanco */
+    top: 6vh;
+    left: 5vw;
+    font-size: clamp(2rem, 4vw, 3.5rem); /* Se adapta según el tamaño de la pantalla */
+    font-weight: bold;
+    color: #ffffff;
     margin: 0;
     user-select: none;
-    /* Borde negro alrededor de las letras */
     text-shadow: 
         -2px -2px 0 #000,  
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000,
-         3px  3px 5px rgba(0,0,0,0.8);
+         3px  3px 6px rgba(0,0,0,0.9);
 }
 
 .cursor {
-    font-size: 2.5rem;
+    font-size: 0.8em;
     margin-left: 8px;
 }
 
-/* Estilo común de las secciones (iconos + enlaces) */
+/* Estilo común de cada elemento */
 .element {
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+    white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
 }
 
 .element .icon {
     font-size: 2.2rem;
-    /* Sombreado para destacar los iconos */
-    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.7));
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.8));
 }
 
 /* Enlaces en blanco con borde negro */
 .element a {
     text-decoration: none;
-    color: #ffffff;    /* Texto blanco */
-    font-size: 1.6rem;
+    color: #ffffff;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
     font-weight: normal;
     font-family: 'Comic Sans MS', 'Tahoma', 'Verdana', sans-serif;
-    /* Borde negro alrededor de las letras */
     text-shadow: 
         -2px -2px 0 #000,  
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000,
-         2px  2px 4px rgba(0,0,0,0.8);
+         2px  2px 5px rgba(0,0,0,0.9);
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .element a:hover {
     opacity: 0.85;
     text-decoration: underline;
-    transform: scale(1.05); /* Ligero aumento al pasar el cursor */
+    transform: scale(1.05);
 }
 
 /* ==========================================
-   POSICIONES DISPERSAS (ESTILO ESCRITORIO)
+   POSICIONES EXACTAS DISTRIBUIDAS
    ========================================== */
 
 /* "sobre mi.." (Arriba a la derecha) */
 .sobre-mi { 
-    top: 25%; 
-    right: 12%; 
+    top: 22vh; 
+    left: 72vw; 
 }
 
-/* "ensayos" (A la izquierda, debajo del título) */
+/* "ensayos" (A la izquierda, en el cielo) */
 .ensayos { 
-    top: 42%; 
-    left: 15%; 
+    top: 40vh; 
+    left: 18vw; 
 }
 
-/* "música y cine" (En el centro de la colina) */
+/* "música y cine" (En la colina, parte central) */
 .musica-cine { 
-    top: 68%; 
-    left: 28%; 
+    top: 65vh; 
+    left: 28vw; 
 }
 
-/* "deseo.. amor" (Abajo a la derecha) */
+/* "deseo.. amor" (Abajo a la derecha, en la hierba) */
 .deseo-amor { 
-    top: 78%; 
-    right: 22%; 
+    top: 75vh; 
+    left: 60vw; 
 }
 
 
@@ -134,7 +142,7 @@ body.section-page {
 .section-header .title {
     position: static;
     font-size: 3rem;
-    font-weight: normal;
+    font-weight: bold;
     margin: 0;
     user-select: none;
     color: #000;
